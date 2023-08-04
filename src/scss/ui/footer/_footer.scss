@@ -1,0 +1,41 @@
+footer {
+    background-color: rgba(221, 72, 20, .8);
+    text-align: center;
+}
+footer .environment {
+    color: rgba(255, 255, 255, 1);
+    padding: 2rem 1.75rem;
+}
+footer .copyrights {
+    background-color: rgba(62, 62, 62, 1);
+    color: rgba(200, 200, 200, 1);
+    padding: .25rem 1.75rem;
+}
+@media (max-width: 629px) {
+    header ul {
+        padding: 0;
+    }
+    header .menu-toggle {
+        padding: 0 1rem;
+    }
+    header .menu-item {
+        background-color: rgba(244, 245, 246, 1);
+        border-top: 1px solid rgba(242, 242, 242, 1);
+        margin: 0 15px;
+        width: calc(100% - 30px);
+    }
+    header .menu-toggle {
+        display: block;
+    }
+    header .hidden {
+        display: none;
+    }
+    header li.menu-item a {
+        background-color: rgba(221, 72, 20, .1);
+    }
+    header li.menu-item a:hover,
+    header li.menu-item a:focus {
+        background-color: rgba(221, 72, 20, .7);
+        color: rgba(255, 255, 255, .8);
+    }
+}
