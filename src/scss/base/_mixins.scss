@@ -27,16 +27,17 @@
 
 @mixin boton($bgColor, $colorTexto){
     background-color: $bgColor;
-    padding: 1.5rem 4rem;
+    padding: 1rem 4rem;
     color: $colorTexto;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     border: none;
     transition-property: background-color;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     text-align: center;
     width: 100%;
     display: inline-block;
+    border-radius: 1rem;
 
     &:hover{
         background-color: darken($bgColor, 10%);
@@ -48,4 +49,15 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin contenedor-md{
+    width: min(95%, 90rem);
+    margin: 0 auto;
+
+}  
+
+@mixin contenedor-sm{
+    width: min(95%, 60rem);
+    margin: 0 auto;
 }

@@ -1,0 +1,10 @@
+@use "base/mixins" as mxn;
+
+.auth{
+    @include mxn.contenedor-sm;
+    padding: 5rem;
+
+    &__titulo{
+        text-align: center;
+    }
+}
