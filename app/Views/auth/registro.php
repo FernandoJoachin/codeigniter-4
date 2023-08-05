@@ -1,14 +1,14 @@
-<?php $this->extend("plantilla/layout"); ?>
+<?php $this->extend("template/layout"); ?>
 
 <?php $this->section("titulo");?>
-Prácticando CodeIgniter 4!
+Registro CodeIgniter 4
 <?php $this->endSection("titulo");?> 
 
 
 <?php $this->section("contenido");?>
 <main class="auth">
     <h1 class="auth__titulo">Crear cuenta</h1>
-    <form class="formulario" method="POST" >
+    <form class="formulario" method="POST" action="<?php echo base_url() . "/registro";?>">
         <div class="formulario__campo">
             <label for="nombre" class="formulario__label">Nombre</label>
             <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Tu Nombre">

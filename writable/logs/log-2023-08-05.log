@@ -1,0 +1,207 @@
+CRITICAL - 2023-08-05 05:45:21 --> Undefined variable $data
+in APPPATH\Controllers\AuthController.php on line 12.
+ 1 APPPATH\Controllers\AuthController.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:12:50 --> Array to string conversion
+in APPPATH\Views\auth\login.php on line 11.
+ 1 APPPATH\Views\auth\login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\AuthController.php(19): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:12:51 --> Array to string conversion
+in APPPATH\Views\auth\login.php on line 11.
+ 1 APPPATH\Views\auth\login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\AuthController.php(19): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:14:39 --> Array to string conversion
+in APPPATH\Views\auth\login.php on line 11.
+ 1 APPPATH\Views\auth\login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\AuthController.php(20): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:14:40 --> Array to string conversion
+in APPPATH\Views\auth\login.php on line 11.
+ 1 APPPATH\Views\auth\login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\AuthController.php(20): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:16:01 --> Array to string conversion
+in APPPATH\Views\auth\login.php on line 11.
+ 1 APPPATH\Views\auth\login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\AuthController.php(20): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:16:29 --> Attempt to read property "mensaje" on array
+in APPPATH\Views\auth\login.php on line 11.
+ 1 APPPATH\Views\auth\login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mensaje" on array', 'C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\codeigniter\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\AuthController.php(20): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:44:47 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in C:\wamp64\www\codeigniter\system\Model.php on line 203
+in SYSTEMPATH\Database\BaseResult.php on line 104.
+ 1 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 3 APPPATH\Controllers\AuthController.php(17): CodeIgniter\BaseModel->find()
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:53:51 --> Call to a member function table() on null
+in APPPATH\Models\UsuarioModel.php on line 48.
+ 1 APPPATH\Controllers\AuthController.php(17): App\Models\UsuarioModel->where('email', 'admin@correo.com')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:54:11 --> Call to a member function table() on null
+in APPPATH\Models\UsuarioModel.php on line 48.
+ 1 APPPATH\Controllers\AuthController.php(17): App\Models\UsuarioModel->where('email', 'admin@correo.com')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 07:54:43 --> Call to a member function table() on null
+in APPPATH\Models\UsuarioModel.php on line 48.
+ 1 APPPATH\Controllers\AuthController.php(17): App\Models\UsuarioModel->where('email', 'admin@correo.com')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:06:52 --> Undefined array key "nombre"
+in APPPATH\Controllers\AuthController.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:07:17 --> Attempt to read property "nombre" on array
+in APPPATH\Controllers\AuthController.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:07:36 --> Attempt to read property "nombre" on array
+in APPPATH\Controllers\AuthController.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:08:50 --> Attempt to read property "nombre" on array
+in APPPATH\Controllers\AuthController.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:11:15 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Models\UsuarioModel.php on line 51.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\codeigniter\\app\\Models\\UsuarioModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UsuarioModel')
+ 3 APPPATH\Controllers\AuthController.php(11): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UsuarioModel')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:11:39 --> Call to a member function table() on null
+in APPPATH\Models\UsuarioModel.php on line 48.
+ 1 APPPATH\Controllers\AuthController.php(19): App\Models\UsuarioModel->where('email', 'prueba@correo.com')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:13:01 --> Call to a member function table() on null
+in APPPATH\Models\UsuarioModel.php on line 49.
+ 1 APPPATH\Controllers\AuthController.php(19): App\Models\UsuarioModel->where('email', 'prueba@correo.com')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:19:42 --> Undefined array key 0
+in APPPATH\Models\UsuarioModel.php on line 50.
+ 1 APPPATH\Models\UsuarioModel.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\codeigniter\\app\\Models\\UsuarioModel.php', 50)
+ 2 APPPATH\Controllers\AuthController.php(17): App\Models\UsuarioModel->where('email', 'admin@correo.com')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:20:23 --> Undefined array key 0
+in APPPATH\Models\UsuarioModel.php on line 50.
+ 1 APPPATH\Models\UsuarioModel.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\codeigniter\\app\\Models\\UsuarioModel.php', 50)
+ 2 APPPATH\Controllers\AuthController.php(17): App\Models\UsuarioModel->where('email', 'a')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:21:35 --> Undefined array key 0
+in APPPATH\Models\UsuarioModel.php on line 50.
+ 1 APPPATH\Models\UsuarioModel.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\codeigniter\\app\\Models\\UsuarioModel.php', 50)
+ 2 APPPATH\Controllers\AuthController.php(17): App\Models\UsuarioModel->where('email', 'admin@correo.com')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:22:09 --> Undefined array key 0
+in APPPATH\Models\UsuarioModel.php on line 50.
+ 1 APPPATH\Models\UsuarioModel.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\codeigniter\\app\\Models\\UsuarioModel.php', 50)
+ 2 APPPATH\Controllers\AuthController.php(17): App\Models\UsuarioModel->where('email', 'admin@correo.com')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:23:05 --> Undefined array key 0
+in APPPATH\Controllers\AuthController.php on line 19.
+ 1 APPPATH\Controllers\AuthController.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:25:26 --> Undefined array key "nombre"
+in APPPATH\Controllers\AuthController.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-05 08:26:28 --> Undefined array key 0
+in APPPATH\Controllers\AuthController.php on line 20.
+ 1 APPPATH\Controllers\AuthController.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\codeigniter\\app\\Controllers\\AuthController.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

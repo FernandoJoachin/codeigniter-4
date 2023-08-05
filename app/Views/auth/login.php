@@ -1,17 +1,22 @@
-<?php $this->extend("plantilla/layout"); ?>
+<?php $this->extend("template/layout"); ?>
 
 <?php $this->section("titulo");?>
-Prácticando CodeIgniter 4!
+Inicio de sesión CodeIgniter 4
 <?php $this->endSection("titulo");?> 
 
 
 <?php $this->section("contenido");?>
 <main class="auth">
     <h1 class="auth__titulo">Registro de usuarios</h1>
-    <form class="formulario" method="POST" >
+    
+    <?php echo view("template/alertas", [
+        "alertas" => $alertas
+    ]); ?>
+
+    <form class="formulario" method="POST" action="<?php echo base_url();?>">
         <div class="formulario__campo">
             <label for="email" class="formulario__label">Email</label>
-            <input type="email" class="formulario__input" name="email" id="email" placeholder="Tu Email">
+            <input type="email" class="formulario__input" name="email" id="email" placeholder="Tu Email" value="<?php echo $usuario->email;?>">
         </div>
         <div class="formulario__campo">
             <label for="password" class="formulario__label">Password</label>
