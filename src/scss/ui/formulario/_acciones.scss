@@ -1,12 +1,24 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
 .acciones{
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+
+    &--right{
+        justify-content: flex-end;
+    }
 
 
     &__enlace{
         font-size: 1.4rem;
         font-weight: normal;
         color: #EE4623;
+    }
+
+    &__boton{
+        @include mxn.boton(#EE4623, vr.$blanco);
+        width: auto;
     }
 }

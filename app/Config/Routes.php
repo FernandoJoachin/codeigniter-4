@@ -33,8 +33,15 @@ $routes->get('/', 'AuthController::login');
 $routes->post('/', 'AuthController::login');
 $routes->get('/registro', 'AuthController::crear');
 $routes->post('/registro', 'AuthController::crear');
+$routes->get('/mensaje', 'AuthController::mensaje');
 
-$routes->get('/inicio', 'InicioController::index');
+$routes->get('/inicio', 'ProductoController::index');
+$routes->get('/inicio/producto/crear', 'ProductoController::crear');
+$routes->post('/inicio/producto/crear', 'ProductoController::crear');
+$routes->get('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
+$routes->post('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
+$routes->get('inicio/producto/eliminar/(:any)', 'ProductoController::eliminar/$1');
+
 
 /*
  * --------------------------------------------------------------------
