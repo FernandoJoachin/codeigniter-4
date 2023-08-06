@@ -4,21 +4,23 @@ namespace App\Controllers;
 
 use App\Models\UsuarioModel;
 use CodeIgniter\I18n\Time;
+use App\Entities\UsuarioEntity;
 
 class AuthController extends BaseController
 {
     public function login(){        
         $alertas = [];
-        $auth = new UsuarioModel();
+        $auth = new UsuarioEntity();
 
         if($this->request->getServer("REQUEST_METHOD") === "POST"){
-            $post = $this->request->getPost();
-            $auth = new UsuarioModel($post);
+            $POST = $this->request->getPost();
+            $auth = new UsuarioEntity($POST);
             $alertas = $auth->validarLogin();
             if(empty($alertas)){
                 $usuario = $auth->where("email", $auth->email);
                 if(!empty($usuario)){
-                    if(password_verify($post["password"], $usuario[0]->password)){
+                    $auth->password = $usuario[0]->password;
+                    if($auth->comprobar_password($POST["password"])){
                         return redirect()->to(base_url('/inicio'));
                     }else{
                         $alertas["error"][] = "Password incorrecto";
@@ -38,20 +40,21 @@ class AuthController extends BaseController
 
     public function crear(){
         $alertas = [];
-        $usuario = new UsuarioModel();
+        $usuario = new UsuarioEntity();
 
         if($this->request->getServer("REQUEST_METHOD") === "POST"){
-            $post = $this->request->getPost();
-            $usuario = new UsuarioModel($post);
+            $POST = $this->request->getPost();
+            $usuario = new UsuarioEntity($POST);
             $alertas = $usuario->validar_cuenta();
             if(empty($alertas)){
                 $existeUsuario = $usuario->where("email", $usuario->email);
                 if(!empty($existeUsuario)){
                     $alertas["error"][] = "El usuario ya esta registrado";
                 }else{
-                    $post["password"] = password_hash($post["password"], PASSWORD_BCRYPT);
-                    $usuario->insert($post);
-                    return redirect()->to(base_url('/'));
+                    $usuarioModel = new UsuarioModel();
+                    $usuario->password_encryptado();
+                    $usuarioModel->insert($usuario);
+                    return redirect()->to(base_url('/mensaje'));
                 }
             }
         }
@@ -59,5 +62,9 @@ class AuthController extends BaseController
             "usuario" => $usuario,
             "alertas" => $alertas
         ]);
+    }
+
+    public function mensaje(){
+        return view("auth/mensaje");
     }
 }

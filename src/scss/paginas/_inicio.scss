@@ -1,0 +1,22 @@
+@use "base/mixins" as mxn;
+@use "base/variables" as vr;
+
+.inicio{
+    @include mxn.contenedor-md;
+    padding: 5rem;
+
+    &__titulo{
+        text-align: center;
+    }
+
+    &__contenedor-boton{
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__boton{
+        @include mxn.boton(#EE4623, vr.$blanco);
+        width: auto;
+    }
+}

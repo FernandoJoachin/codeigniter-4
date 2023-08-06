@@ -8,6 +8,9 @@ Registro CodeIgniter 4
 <?php $this->section("contenido");?>
 <main class="auth">
     <h1 class="auth__titulo">Crear cuenta</h1>
+    <?php echo view("template/alertas", [
+        "alertas" => $alertas
+    ]); ?>
     <form class="formulario" method="POST" action="<?php echo base_url() . "/registro";?>">
         <div class="formulario__campo">
             <label for="nombre" class="formulario__label">Nombre</label>

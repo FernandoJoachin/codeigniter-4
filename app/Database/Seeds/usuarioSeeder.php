@@ -3,7 +3,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class usuariosSeeder extends Seeder{
+class usuarioSeeder extends Seeder{
     public function run(){
         $data = [
             "nombre" => "Jane",

@@ -529,10 +529,32 @@ footer .copyrights {
   display: flex;
   justify-content: space-between;
 }
+.acciones--right {
+  justify-content: flex-end;
+}
 .acciones__enlace {
   font-size: 1.4rem;
   font-weight: normal;
   color: #EE4623;
+}
+.acciones__boton {
+  background-color: #EE4623;
+  padding: 1rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  border-radius: 1rem;
+  width: auto;
+}
+.acciones__boton:hover {
+  background-color: #ce3110;
+  cursor: pointer;
 }
 
 .alerta {
@@ -553,6 +575,46 @@ footer .copyrights {
   color: #02db02;
 }
 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table__thead {
+  background-color: #1E293B;
+  color: #FFFFFF;
+}
+.table__th {
+  padding: 1rem;
+  text-align: center;
+}
+.table__tr:nth-of-type(even) {
+  background-color: #e3ebf3;
+}
+.table__td, .table__td--acciones {
+  padding: 1.5rem 1rem;
+}
+.table__td--acciones {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+}
+.table__accion {
+  all: unset;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.table__accion--editar {
+  color: #007df4;
+}
+.table__accion--eliminar {
+  color: rgb(169, 0, 0);
+}
+.table__accion:hover {
+  cursor: pointer;
+}
+
 .auth {
   width: min(95%, 60rem);
   margin: 0 auto;
@@ -560,5 +622,38 @@ footer .copyrights {
 }
 .auth__titulo {
   text-align: center;
+}
+
+.inicio {
+  width: min(95%, 90rem);
+  margin: 0 auto;
+  padding: 5rem;
+}
+.inicio__titulo {
+  text-align: center;
+}
+.inicio__contenedor-boton {
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.inicio__boton {
+  background-color: #EE4623;
+  padding: 1rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  border-radius: 1rem;
+  width: auto;
+}
+.inicio__boton:hover {
+  background-color: #ce3110;
+  cursor: pointer;
 }
 /*# sourceMappingURL=app.css.map */
