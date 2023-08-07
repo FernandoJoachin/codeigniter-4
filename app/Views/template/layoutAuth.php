@@ -31,14 +31,6 @@
                 </li>
             </ul>
         </div>
-        <div class="header__sesion">
-            <h3>Hola: <?php echo session()->get('nombre') ?? "";?></h3>
-            <a href="<?php echo base_url() . "/logout";?>" class="header__boton">
-                <li class="fa-solid fa-right-to-bracket"></li>
-                Cerrar sesión
-            </a>
-        </div>
-
     </header>
 
     <?php $this->renderSection("contenido"); ?>

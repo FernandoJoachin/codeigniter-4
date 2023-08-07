@@ -42,7 +42,7 @@ class UsuarioEntity extends Entity
     }
 
     public function comprobar_password($passwordComprobar){
-        return password_verify($passwordComprobar, $this->password );
+        return password_verify($passwordComprobar, $this->password);
     }
 
     public function where($columna,$valor){

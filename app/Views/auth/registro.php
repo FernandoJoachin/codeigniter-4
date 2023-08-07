@@ -1,4 +1,4 @@
-<?php $this->extend("template/layout"); ?>
+<?php $this->extend("template/layoutAuth"); ?>
 
 <?php $this->section("titulo");?>
 Registro CodeIgniter 4
