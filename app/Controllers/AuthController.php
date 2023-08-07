@@ -21,6 +21,11 @@ class AuthController extends BaseController
                 if(!empty($usuario)){
                     $auth->password = $usuario[0]->password;
                     if($auth->comprobar_password($POST["password"])){
+                        session()->set([
+                            "id" => $usuario[0]->id,
+                            "nombre" => $usuario[0]->nombre,
+                            "autenticado" => true
+                        ]);
                         return redirect()->to(base_url('/inicio'));
                     }else{
                         $alertas["error"][] = "Password incorrecto";
@@ -35,6 +40,45 @@ class AuthController extends BaseController
             "usuario" => $auth,
             "alertas" => $alertas
         ]);
+    } 
+    
+    /* USANDO VALIDATE PARA VALIDAR LOS INPUTS DEL FORMULARIO - OPCION
+    public function login(){        
+        $alertas = [];
+        $auth = new UsuarioEntity();
+        $validacion = null;
+
+        if($this->request->getServer("REQUEST_METHOD") === "POST"){
+            $POST = $this->request->getPost();
+            $auth = new UsuarioEntity($POST);
+            $validacion = \Config\Services::validation();;
+            $validacion->setRules([
+                "email" => "required|valid_emails",
+                "password" => "required"
+            ]);
+            if($validacion->withRequest($this->request)->run()){
+                $usuario = $auth->where("email", $auth->email);
+                $auth->password = $usuario[0]->password;
+                if($auth->comprobar_password($POST["password"])){
+                    session()->set([
+                        "id" => $usuario[0]->id,
+                        "nombre" => $usuario[0]->nombre
+                    ]);
+                    return redirect()->to(base_url('/inicio'));
+                }
+            }
+        }
+
+        return view("auth/login", [
+            "usuario" => $auth,
+            "alertas" => $alertas,
+            "validacion" => $validacion
+        ]);
+    }*/
+
+    public function logout(){
+        session()->destroy();
+        return redirect()->to(base_url('/'));
     }
 
 

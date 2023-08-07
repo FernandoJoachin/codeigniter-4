@@ -1,4 +1,4 @@
-<?php $this->extend("template/layout"); ?>
+<?php $this->extend("template/layoutAuth"); ?>
 
 <?php $this->section("titulo");?>
 Inicio de sesión CodeIgniter 4
@@ -9,9 +9,16 @@ Inicio de sesión CodeIgniter 4
 <main class="auth">
     <h1 class="auth__titulo">Registro de usuarios</h1>
     
-    <?php echo view("template/alertas", [
-        "alertas" => $alertas
-    ]); ?>
+    <?php 
+        /* Usando validate
+        if(!empty($validacion)){
+            echo $validacion->listErrors();
+        }
+        */
+        echo view("template/alertas", [
+            "alertas" => $alertas
+        ]);
+    ?>
 
     <form class="formulario" method="POST" action="<?php echo base_url();?>">
         <div class="formulario__campo">

@@ -56,6 +56,7 @@ CRUD CodeIgniter 4
             <p class="text-center">No hay productos aún</p>
         <?php }?>
     </div>
+    <?php echo $pager->links()?>
     <div class="acciones">
         <a href="<?php echo base_url();?>" class="acciones__boton">
             <i class="fa-solid fa-circle-arrow-left"></i>
