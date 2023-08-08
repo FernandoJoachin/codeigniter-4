@@ -43,6 +43,8 @@ $routes->post('/inicio/producto/crear', 'ProductoController::crear');
 $routes->get('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
 $routes->post('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
 $routes->get('inicio/producto/eliminar/(:any)', 'ProductoController::eliminar/$1');
+$routes->get('/inicio/email', 'EmailController::email');
+$routes->post('/inicio/email', 'EmailController::email');
 
 
 /*
