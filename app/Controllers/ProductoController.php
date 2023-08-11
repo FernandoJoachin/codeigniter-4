@@ -11,8 +11,8 @@ class ProductoController extends BaseController
     public function index(){
         $productoModel = new ProductoModel();
         //$productos = $productoModel->findAll();
-        return view("pagina/inicio",[
-            "productos" => $productoModel->paginate(1),
+        return view("pagina/producto/inicio",[
+            "productos" => $productoModel->paginate(10),
             "pager" => $productoModel->pager
         ]);
     }
@@ -32,7 +32,7 @@ class ProductoController extends BaseController
             }
         }
 
-        return view("pagina/crear", [
+        return view("pagina/producto/crear", [
             "alertas" => $alertas,
             "producto" => $producto
         ]);
@@ -54,7 +54,7 @@ class ProductoController extends BaseController
             }
         }
 
-        return view("pagina/editar",[
+        return view("pagina/producto/editar",[
             "producto" => $producto,
             "alertas" => $alertas
         ]);
@@ -66,6 +66,5 @@ class ProductoController extends BaseController
             $productoModel->delete($id);
             return redirect()->to(base_url('/inicio'));
         }
-        return view("pagina/eliminar");
     }
 }
