@@ -43,6 +43,12 @@ $routes->post('/inicio/producto/crear', 'ProductoController::crear');
 $routes->get('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
 $routes->post('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
 $routes->get('inicio/producto/eliminar/(:any)', 'ProductoController::eliminar/$1');
+
+$routes->get('/inicio/personas', 'PersonaController::index');
+$routes->get('/inicio/personas/crear', 'PersonaController::crear');
+$routes->post('/inicio/personas/crear', 'PersonaController::crear');
+$routes->post('/inicio/personas/process', 'PersonaController::process');
+
 $routes->get('/inicio/email', 'EmailController::email');
 $routes->post('/inicio/email', 'EmailController::email');
 
