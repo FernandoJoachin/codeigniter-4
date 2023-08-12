@@ -19,13 +19,9 @@ class Personas extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '40',
             ],
-            'folder' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '40',
-            ],
             'imagen' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '40',
+                'constraint' => '100',
             ]
         ]);
         $this->forge->addKey('id', true);
