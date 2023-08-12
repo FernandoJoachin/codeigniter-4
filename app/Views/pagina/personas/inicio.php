@@ -32,7 +32,7 @@ CRUD CodeIgniter 4
                                 <?php echo $persona->nombre;?>
                             </td>
                             <td class="table__td">
-                                <?php echo "imagen"?>
+                                <img src="<?php echo "$persona->folder" . $persona->imagen?>" alt="Imagen persona">
                             </td>
                             <td class="table__td--acciones">
                                 <a href="<?php echo base_url() . "inicio/personas/editar/" . $persona->id;?>" class="table__accion table__accion--editar">

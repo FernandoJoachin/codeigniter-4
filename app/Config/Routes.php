@@ -48,6 +48,7 @@ $routes->get('/inicio/personas', 'PersonaController::index');
 $routes->get('/inicio/personas/crear', 'PersonaController::crear');
 $routes->post('/inicio/personas/crear', 'PersonaController::crear');
 $routes->post('/inicio/personas/process', 'PersonaController::process');
+$routes->delete('/inicio/personas/revert', 'PersonaController::revert');
 
 $routes->get('/inicio/email', 'EmailController::email');
 $routes->post('/inicio/email', 'EmailController::email');

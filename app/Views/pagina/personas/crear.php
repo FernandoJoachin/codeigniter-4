@@ -44,8 +44,11 @@ Crear persona CodeIgniter 4
     // Create a FilePond instance
     const pond = FilePond.create(inputElement);
     FilePond.setOptions({
+        labelIdle:
+            'Arrastra y suelta tu imagen o  <u style="cursor:pointer;">Selecciona</u>',
         server:{
             process: "http://codeigniter.cm/public/inicio/personas/process",
+            revert: "http://codeigniter.cm/public/inicio/personas/revert"
         }
     })
 </script>
