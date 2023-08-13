@@ -19,8 +19,7 @@ class AuthController extends BaseController
             if(empty($alertas)){
                 $usuario = $auth->where("email", $auth->email);
                 if(!empty($usuario)){
-                    $auth->password = $usuario[0]->password;
-                    if($auth->comprobar_password($POST["password"])){
+                    if(password_verify($POST['password'], $usuario[0]->password)){
                         session()->set([
                             "id" => $usuario[0]->id,
                             "nombre" => $usuario[0]->nombre,
@@ -82,9 +81,10 @@ class AuthController extends BaseController
     }
 
 
-    public function crear(){
+/*     public function crear(){
         $alertas = [];
         $usuario = new UsuarioEntity();
+        $validacion = null;
 
         if($this->request->getServer("REQUEST_METHOD") === "POST"){
             $POST = $this->request->getPost();
@@ -106,6 +106,28 @@ class AuthController extends BaseController
             "usuario" => $usuario,
             "alertas" => $alertas
         ]);
+    } */
+
+    public function crear(){
+        $usuario = new UsuarioEntity();
+
+        if($this->request->getServer("REQUEST_METHOD") === "POST"){
+            $POST = $this->request->getPost();
+            $usuario = new UsuarioEntity($POST);
+            if($this->validate([
+                "nombre" => "required",
+                "apellido" => "required",
+                "email" => "required|valid_emails|is_unique[usuarios.email]",
+                "password" => "required|matches[c-password]"
+            ])){
+                $usuarioModel = new UsuarioModel();
+                $usuarioModel->insert($usuario);
+                return redirect()->to(base_url('/mensaje'));
+            }else{
+                return redirect()->to(base_url('/registro'))->withInput()->with("errors", $this->validator->getErrors());
+            }
+        }
+        return view("auth/registro");
     }
 
     public function mensaje(){
