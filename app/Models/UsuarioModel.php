@@ -15,4 +15,11 @@ class UsuarioModel extends Model
     protected $useSoftDeletes = false;
 
     protected $allowedFields = ['nombre', 'apellido', 'email', 'password'];
+
+    protected $beforeInsert = ["password_encryptado"]; 
+
+    public function password_encryptado($data){
+        $data["data"]["password"] = password_hash($data["data"]["password"], PASSWORD_BCRYPT);
+        return $data;
+    }
 }
