@@ -35,10 +35,10 @@ class Prueba extends Migration
                 'type'           => 'INT',
                 'constraint'     => 5,
             ],
-           /*  'imagen' => [
+           'imagen' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '60',
-            ], */
+            ], 
             'mensaje' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
