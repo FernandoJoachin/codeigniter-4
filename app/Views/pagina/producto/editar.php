@@ -14,7 +14,7 @@ Editar producto CodeIgniter 4
     ]); ?>
 
     <div class="acciones acciones--right">
-        <a href="<?php echo base_url() . "/inicio" ;?>" class="acciones__boton">
+        <a href="<?php echo base_url() . "inicio" ;?>" class="acciones__boton">
             <i class="fa-solid fa-circle-arrow-left"></i>
             Volver
         </a>

@@ -6,8 +6,8 @@
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
-    <link rel="preload" href="/public/assets/css/app.css" as="style">
-    <link rel="stylesheet" href="/public/assets/css/app.css">
+    <link rel="preload" href="<?= base_url() . 'public/assets/css/app.css'?>" as="style">
+    <link rel="stylesheet" href="<?= base_url() . 'public/assets/css/app.css'?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>

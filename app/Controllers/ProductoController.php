@@ -10,10 +10,9 @@ class ProductoController extends BaseController
 {
     public function index(){
         $productoModel = new ProductoModel();
-        //$productos = $productoModel->findAll();
+        $productos = $productoModel->findAll();
         return view("pagina/producto/inicio",[
-            "productos" => $productoModel->paginate(10),
-            "pager" => $productoModel->pager
+            "productos" => $productos
         ]);
     }
 

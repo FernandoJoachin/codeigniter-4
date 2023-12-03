@@ -9,12 +9,6 @@ CRUD CodeIgniter 4
 <main class="inicio">
     <h1 class="inicio__titulo">CRUD de productos</h1>
     <div class="inicio__contenedor-boton">
-        <a href="<?php echo base_url() . "inicio/email";?>" class="inicio__boton">
-            <li class="fa-solid fa-envelope"></li>
-            Enviar Email
-        </a>
-    </div>
-    <div class="inicio__contenedor-boton">
         <a href="<?php echo base_url() . "inicio/producto/crear";?>" class="inicio__boton">
             <li class="fa-solid fa-circle-plus"></li>
             Agregar Producto
@@ -62,16 +56,11 @@ CRUD CodeIgniter 4
             <p class="text-center">No hay productos aún</p>
         <?php }?>
     </div>
-    <?php echo $pager->links()?>
 
     <div class="acciones">
         <a href="<?php echo base_url();?>" class="acciones__boton">
             <i class="fa-solid fa-circle-arrow-left"></i>
             Voler a Inicio sesión
-        </a>
-        <a href="<?php echo base_url(). "inicio/personas";?>" class="acciones__boton">
-            <i class="fa-solid fa-circle-arrow-right"></i>
-            Ir a CRUD personas
         </a>
     </div>
 </main>
