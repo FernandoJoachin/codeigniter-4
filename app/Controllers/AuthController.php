@@ -5,21 +5,56 @@ namespace App\Controllers;
 use App\Models\UsuarioModel;
 use App\Entities\UsuarioEntity;
 
+/**
+ * Clase que actúa como un controlador para los diferentes servicios
+ * para la autenticación de un usuario.
+ * 
+ * @extends BaseController Clase Base de controlador proporcionada por CodeIgniter.
+ */
 class AuthController extends BaseController
 {
+    /**
+     * Muestra la vista de inicio de sesión.
+     *
+     * Este método carga y devuelve la vista correspondiente a la página de inicio de sesión.
+     * 
+     * @return string La vista renderizada de inicio de sesión.
+     */
     public function vistaIniciarSesion(){        
         return view("auth/login");
     }
 
+    /**
+     * Muestra la vista de crear usuario.
+     *
+     * Este método carga y devuelve la vista correspondiente a la página de crear usuario.
+     * 
+     * @return string La vista renderizada de crear usuario.
+     */
     public function vistaCrearUsuario(){
         return view("auth/registro");
     }
 
+    /**
+     * Muestra la vista de mensaje.
+     *
+     * Este método carga y devuelve la vista correspondiente a la página de mensaje la cual avisa que se creó la cuenta.
+     * 
+     * @return string La vista renderizada de inicio de sesión.
+     */
     public function mensaje()
     {
         return view("auth/mensaje");
     }
 
+    /**
+     * Inicia la sesión del usuario.
+     *
+     * Este método crea la sesión del usuario si las credenciales proporcionadas
+     * son válidas, en caso de que no lo sean, muestra mensajes de error.
+     * 
+     * @return \CodeIgniter\HTTP\RedirectResponse Redirige la página dependiendo de la validación.
+     */
     public function iniciarSesion()
     {        
         $POST = $this->request->getPost();
@@ -48,6 +83,14 @@ class AuthController extends BaseController
         return redirect()->to(base_url())->withInput()->with('errors', $alertas);
     } 
 
+    /**
+     * Crea un nuevo usuario.
+     *
+     * Este método crea un usuario con las credenciales proporcionadas siempre que 
+     * no exista en la base de datos, de lo contrario mostrará mensajes de error.
+     * 
+     * @return \CodeIgniter\HTTP\RedirectResponse Redirige la página dependiendo de la validación.
+     */
     public function crearUsuario(){
         $POST = $this->request->getPost();
         $usuario = new UsuarioEntity($POST);
@@ -70,6 +113,13 @@ class AuthController extends BaseController
         return redirect()->to(base_url('registro'))->withInput()->with('errors', $alertas);
     }
 
+    /**
+     * Cierra la sesión del usuario.
+     *
+     * Este método destruye la sesión actual del usuario y redirige a la página de inicio.
+     * 
+     * @return \CodeIgniter\HTTP\RedirectResponse Redirige a la página principal para volver a autenticarse.
+     */
     public function logout(){
         session()->destroy();
         return redirect()->to(base_url('/'));
