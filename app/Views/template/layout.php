@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?= base_url() . 'public/assets/css/app.css'?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+    <?php $this->renderSection("css"); ?>    
 </head>
 <body>
     <header>
@@ -54,7 +54,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script>
         function toggleMenu() {
             var menuItems = document.getElementsByClassName('menu-item');

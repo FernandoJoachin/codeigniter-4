@@ -663,6 +663,7 @@ footer .copyrights {
   padding-bottom: 2rem;
   display: flex;
   justify-content: flex-end;
+  gap: 2rem;
 }
 .inicio__boton {
   background-color: #EE4623;

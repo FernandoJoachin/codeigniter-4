@@ -36,8 +36,12 @@ class ProductoController extends BaseController
         $alertas = $producto->validar_producto();
         if(empty($alertas)){
             $productoModel = new ProductoModel();
-            $productoModel->insert($producto);
-            return redirect()->to(base_url('/inicio'));
+            try {
+                $productoModel->insert($producto);
+                return redirect()->to(base_url('/inicio'));
+            } catch (\Throwable $th) {
+                $alertas["error"][] = "Algo salio mal al crear el producto. Por favor, inténtalo de nuevo.";
+            }
         }
 
         return redirect()->to(base_url('inicio/producto/crear'))->withInput()->with('errors', $alertas);
@@ -49,8 +53,12 @@ class ProductoController extends BaseController
         $producto = new ProductoEntity($POST);
         $alertas = $producto->validar_producto();
         if(empty($alertas)){
-            $productoModel->update($id, $producto);
-            return redirect()->to(base_url('/inicio'));
+            try {
+                $productoModel->update($id, $producto);
+                return redirect()->to(base_url('/inicio'));
+            } catch (\Throwable $th) {
+                $alertas["error"][] = "Algo salio mal al editar el certificado. Por favor, inténtalo de nuevo.";
+            };
         }
         return redirect()->to(base_url('inicio/producto/editar/'.$id))->withInput()->with('errors', $alertas);
     }

@@ -29,6 +29,7 @@ class AuthController extends BaseController
         if(empty($alertas)){
             $usuario = $auth->where("email", $auth->email);
             if(!empty($usuario)){
+
                 if(password_verify($POST['password'], $usuario[0]->password)){
                     session()->set([
                         "id" => $usuario[0]->id,
@@ -57,9 +58,12 @@ class AuthController extends BaseController
                 $alertas["error"][] = "El usuario ya esta registrado";
             }else{
                 $usuarioModel = new UsuarioModel();
-                $usuario->password_encryptado();
-                $usuarioModel->insert($usuario);
-                return redirect()->to(base_url('/mensaje'));
+                try {
+                    $usuarioModel->insert($usuario);
+                    return redirect()->to(base_url('/mensaje'));
+                } catch (\Throwable $th) {
+                    $alertas["error"][] = "Algo salio mal al crear el usuario. Por favor, inténtalo de nuevo.";
+                }
             }
         }
 
