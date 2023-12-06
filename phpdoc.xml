@@ -1,0 +1,27 @@
+<phpdocumentor
+        configVersion="3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://www.phpdoc.org"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/phpDocumentor/phpDocumentor/master/data/xsd/phpdoc.xsd"
+>
+    <paths>
+        <output>docs/api</output>
+        <cache>docs/cache</cache>
+    </paths>
+    <version number="3.0.0">
+        <api format="php">
+            <source dsn="./app">
+                <path>Controllers</path>
+                <path>Models</path>
+                <path>Entities</path>
+            </source>
+            <output>api</output>
+            <ignore>
+                <path>Controllers/BaseController.php</path>
+            </ignore>
+            <extensions>
+                <extension>php</extension>
+            </extensions>
+        </api>
+    </version>
+</phpdocumentor>
