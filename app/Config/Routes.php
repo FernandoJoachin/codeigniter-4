@@ -29,29 +29,20 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'AuthController::login');
-$routes->post('/', 'AuthController::login');
+$routes->get('/', 'AuthController::vistaIniciarSesion');
+$routes->post('/', 'AuthController::iniciarSesion');
 $routes->get('/logout', 'AuthController::logout');
-$routes->get('/registro', 'AuthController::crear');
-$routes->post('/registro', 'AuthController::crear');
+$routes->get('/registro', 'AuthController::vistaCrearUsuario');
+$routes->post('/registro', 'AuthController::crearUsuario');
 $routes->get('/mensaje', 'AuthController::mensaje');
 
 
-$routes->get('/inicio', 'ProductoController::index');
-$routes->get('/inicio/producto/crear', 'ProductoController::crear');
-$routes->post('/inicio/producto/crear', 'ProductoController::crear');
-$routes->get('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
-$routes->post('/inicio/producto/editar/(:any)', 'ProductoController::editar/$1');
-$routes->get('inicio/producto/eliminar/(:any)', 'ProductoController::eliminar/$1');
-
-$routes->get('/inicio/personas', 'PersonaController::index');
-$routes->get('/inicio/personas/crear', 'PersonaController::crear');
-$routes->post('/inicio/personas/crear', 'PersonaController::crear');
-$routes->post('/inicio/personas/process', 'PersonaController::process');
-$routes->delete('/inicio/personas/revert', 'PersonaController::revert');
-
-$routes->get('/inicio/email', 'EmailController::email');
-$routes->post('/inicio/email', 'EmailController::email');
+$routes->get('/inicio', 'ProductoController::vistaProducto');
+$routes->get('/inicio/producto/crear', 'ProductoController::vistaCrearProducto');
+$routes->post('/inicio/producto/crear', 'ProductoController::crearProducto');
+$routes->get('/inicio/producto/editar/(:any)', 'ProductoController::vistaEditarProducto/$1');
+$routes->post('/inicio/producto/editar/(:any)', 'ProductoController::editarProducto/$1');
+$routes->get('inicio/producto/eliminar/(:any)', 'ProductoController::eliminarProducto/$1');
 
 
 /*

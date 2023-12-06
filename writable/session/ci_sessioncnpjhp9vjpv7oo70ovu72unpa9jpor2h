@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1701839875;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:2:{s:5:"email";s:0:"";s:8:"password";s:0:"";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"new";s:6:"errors";s:3:"new";}errors|a:1:{s:5:"error";a:2:{i:0;s:35:"El Email del Usuario es Obligatorio";i:1;s:29:"El Password no puede ir vacio";}}

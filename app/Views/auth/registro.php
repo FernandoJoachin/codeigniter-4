@@ -9,21 +9,24 @@ Registro CodeIgniter 4
 <main class="auth">
     <h1 class="auth__titulo">Crear cuenta</h1>
     <?php 
-        foreach(session()->get('errors') ?? [] as $error){ ?>
-        <p class="alerta alerta__error"><?php echo $error ?></p>
-     <?php   } ?>
+        $errors = session()->get('errors') ?? [];
+        echo view("template/alertas", [
+            "alertas" => $errors
+        ]);
+    ?>
+
     <form class="formulario" method="POST">
         <div class="formulario__campo">
             <label for="nombre" class="formulario__label">Nombre</label>
-            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Tu Nombre" value="<?php echo old("nombre")?>">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Tu Nombre" value="<?= old("nombre")?>">
         </div>
         <div class="formulario__campo">
             <label for="apellido" class="formulario__label">Apellido</label>
-            <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Tu Apellido" value="<?php echo old("apellido")?>">
+            <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Tu Apellido" value="<?= old("apellido")?>">
         </div>
         <div class="formulario__campo">
             <label for="email" class="formulario__label">Email</label>
-            <input type="email" class="formulario__input" name="email" id="email" placeholder="Tu Email" value="<?php echo old("email")?>">
+            <input type="email" class="formulario__input" name="email" id="email" placeholder="Tu Email" value="<?= old("email")?>">
         </div>
         <div class="formulario__campo">
             <label for="password" class="formulario__label">Password</label>
