@@ -6,8 +6,16 @@ use App\Models\UsuarioModel;
 use CodeIgniter\I18n\Time;
 use App\Entities\UsuarioEntity;
 
+/**
+ * Controlador para la autenticación de usuarios.
+ */
 class AuthController extends BaseController
 {
+    /**
+     * Maneja el proceso de inicio de sesión de usuarios.
+     *
+     * @return mixed Vista de inicio de sesión o redirección a la página de inicio.
+     */
     public function login(){        
         $alertas = [];
         $auth = new UsuarioEntity();
@@ -75,6 +83,12 @@ class AuthController extends BaseController
         ]);
     }*/
 
+    
+    /**
+     * Cierra la sesión de usuario.
+     *
+     * @return mixed Redirección a la página de inicio.
+     */
     public function logout(){
         session()->destroy();
         return redirect()->to(base_url('/'));
@@ -108,6 +122,11 @@ class AuthController extends BaseController
         ]);
     } */
 
+     /**
+     * Crea un nuevo usuario.
+     *
+     * @return mixed Vista de registro o redirección a la página de mensaje.
+     */
     public function crear(){
         $usuario = new UsuarioEntity();
 
@@ -130,6 +149,11 @@ class AuthController extends BaseController
         return view("auth/registro");
     }
 
+    /**
+     * Muestra una página de mensaje.
+     *
+     * @return mixed Vista de mensaje.
+     */
     public function mensaje(){
         return view("auth/mensaje");
     }
